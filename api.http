@@ -1,0 +1,38 @@
+### Recuperar todos os filmes               SOLUCIÓN de CORS y Desarrollo de API REST con Express
+GET http://localhost:1234/movies
+
+
+### Recuperar o filme pelo ID
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+
+### Recuperar o filme pela categoria (queryParams ??? )
+GET http://localhost:1234/movies?genre=ActIoN
+
+
+### Criar um filme
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "The Falesia",
+    "year": 1975,
+    "director": "Bruno Janeiro",
+    "duration": 175,
+    "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+    "genre": [
+        "Crime",
+        "Drama"
+    ],
+    "rate":8.0
+}
+
+
+### Actualizar uma PARTE do filme
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1988,
+    "duration": 180
+}
